@@ -1,0 +1,19 @@
+// areadelrecutangulo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{
+	float a, b, area;
+	cout<<"ingrese altura: ";
+	cin>>a;
+	cout<<"ingrese base; ";
+	cin>>b;
+    area = (a*b);
+	cout<<"el area es: "<<area;
+	getch();
+}
