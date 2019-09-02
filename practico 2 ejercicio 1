@@ -1,0 +1,34 @@
+//practico 2.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<iostream>
+#include"conio.h"
+
+using namespace std;
+
+void main ()
+{
+	float parciales,practica,nota_final,p1,p2,p3,Pr,F,promedio;
+	cout<<"digite la nota del primer parcial: ";
+	cin>>p1;
+	cout<<"digite la nota del segundo parcial: ";
+	cin>>p2;
+	cout<<"digite la nota del tercer parcial: ";
+	cin>>p3;
+	parciales=((p1+p2+p3)/3)*0.4;
+	cout<<"el promedio de los parciales es: "<<parciales<<endl;
+	cout<<"digite la nota practica: ";
+	cin>>Pr;
+	practica=Pr*0.20;
+	cout<<"su nota practica es: "<<practica<<endl;
+	cout<<"digite su nota final: ";
+	cin>>F;
+	nota_final=F*0.40;
+	cout<<"su nota final es: "<<nota_final<<endl;
+	promedio=parciales+practica+nota_final;
+	cout<<"el promedio es: "<<promedio;
+
+
+	getch();
+}
