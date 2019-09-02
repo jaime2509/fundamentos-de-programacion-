@@ -1,0 +1,41 @@
+
+#include"stdafx.h"
+#include<iostream>
+#include"conio.h"
+
+
+using namespace std;
+
+void main (){
+	
+	float p;
+	
+	cout<<"ingrese costo: ";cin>>p;
+	
+	if(p<0||p<50){
+		cout<<"-------------------------------\n--- El costo es de Bs. 1.50 ---\n-------------------------------"<<endl;
+	}
+	else if(p<51||p<=100){
+		cout<<"-------------------------------\n--- El costo es de Bs. 4.00 ---\n-------------------------------"<<endl;
+    }
+    else if (p<100||p<=200){
+    	cout<<"-------------------------------\n--- El costo es de Bs. 6.00 ---\n-------------------------------"<<endl;
+    }
+    else if (p<200||p<=350){
+    	cout<<"--------------------------------\n--- El costo es de Bs. 10.50 ---\n--------------------------------"<<endl;
+    }
+    else if (p<350||p<=500){
+    	cout<<"--------------------------------\n--- El costo es de Bs. 15.00 ---\n--------------------------------"<<endl;
+    }
+	else if (p>500){
+		cout<<"----------------------------------\n--- NO PUEDE ENVIAR COMO CARTA ---\n----------------------------------"<<endl;
+	}
+	
+	
+	cout<<"hola bb";
+	
+	
+	getch();
+
+
+}
