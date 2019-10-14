@@ -1,0 +1,17 @@
+//jaime suarez__ ejercicio 23, practico de series.
+#include"stdafx.h"
+#include<iostream>
+#include"conio.h"
+using namespace std;
+void main()
+{
+	int n,cifras=1;
+	cout<<"digite un numero: ";
+    cin>>n;
+	while((n/10)>0){
+  n=n/10;
+  cifras++;}
+	cout<<"el numero tiene: "<<cifras<<"  digitos: "<<endl;
+
+	getch();
+}
