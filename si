@@ -1,0 +1,21 @@
+//jaime suarez__ ejercicio 23, practico de series.
+#include"stdafx.h"
+#include<iostream>
+#include"conio.h"
+using namespace std;
+void main()
+{
+	int n,sum=0,digito;
+    cout<<"digite un numero: "<<endl;
+	cin>>n;
+    while(n>0){
+	digito=n%10; 
+	n=n/10;
+	sum=sum+digito;
+	}
+	cout<<"la suma es: "<<endl;
+	cout<<sum<<endl;
+	
+
+    getch();
+}
