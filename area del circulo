@@ -1,0 +1,23 @@
+// Sumandos.cpp : Defines the entry point for the console application.
+//si lee esto me debe 5 puntos;
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" //getch
+
+using namespace std;
+
+void main()
+{
+
+   float a,area;
+   // Pedir el radio 
+   cout<<"Ingrese el radio: ";
+   cin>>a;
+   
+   
+   area =(a*a)*3.1416;//Proceso 
+   // Salida
+   cout<<"El area del circulo es: "<<area;
+   getch(); 
+
+}
