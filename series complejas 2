@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include"conio.h"
+#include<iostream>
+using namespace std;
+
+
+int serie (int n,int t);
+void main()
+{
+	int t,n;
+	do {
+	cout<<"ingrese n:"<<endl;
+	cin>>n;
+	} while (n<=0); //Validar con la condición contraria
+	do{
+	cout<<"ingrese t:"<<endl;
+	cin>>t;
+	} while (t<=0); //Validar con la condición contraria
+	cout<<serie(n,t);
+	getch();
+}
+int serie (int n,int t)
+{
+	int s=0,sig=1;
+    for(int i=1;i<=n;i++)
+	{
+		s=s+sig*i*t;
+		sig=-sig;
+	}
+	return s;
+}
