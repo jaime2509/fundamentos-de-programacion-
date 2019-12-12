@@ -1,0 +1,111 @@
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#define MAX 100
+using namespace std;
+
+void leerVector (int [], int);
+void menu(int [], int);
+int Mayor (int [], int);
+int Menor (int [], int);
+int Posicion (int [], int);
+int posicionmenor(int [], int);
+
+
+int main()
+{
+	int v[MAX];
+	cout <<"Cantidad de datos: ";
+	int n; cin>>n;
+	leerVector (v, n);
+	menu (v, n);
+	
+	
+	
+}
+void leerVector (int v[], int n)
+{
+	for (int i=0; i<n; i++)
+	cin >> v[i];
+	
+}
+void menu (int v[], int n)
+{
+	int op;
+	
+	cout<<"------------- MENU ------------"<<endl;
+	cout<<"1. Calculo de mayor numero"<<endl;
+	cout<<"2. Calculo de menor numero"<<endl;
+	cout<<"3. Indique la posicion del mayor numero en el vector"<<endl;
+	cout<<"4. Indique la posicion del menor numero en el vector"<<endl;
+	cout<<"5. Salir"<<endl;
+	cin>>op;
+	
+	switch(op)
+	{
+		case 1:
+			{
+				cout<<"El numero mayor es: " <<Mayor(v, n) <<endl;
+				menu(v, n); break;				
+			}
+		case 2:
+			{
+				cout <<"El numero menor es: "<< Menor(v, n) <<endl;
+				menu(v, n); break;
+			}
+		case 3:
+			{
+				cout<<"Posicion del mayor es: "<<Posicion(v, n)<<endl;
+				menu(v, n); break;
+			}
+		case 4:
+			{
+				cout<<"Posicion del menor es: "<<Posicion (v, n) <<endl;
+				menu (v, n); break; 
+			}
+		case 5:
+			{
+				cout<<"Saliendo..."<<endl; break;
+			}
+		default:
+			{
+				cout<< "Error, Ingrese una opcion valida"<<endl;
+				menu(v, n); break;
+			}
+		
+	}
+	
+	
+}
+int Mayor(int v[], int n)
+{
+	int m= v[0];
+	for (int i=1; i<n; i++)
+	{
+		if(v[i]>m)
+		m= v[i];
+	}
+	return m;
+}
+int Menor(int v[], int n)
+{
+	int m = v[0];
+	for (int i=0; i<n; i++)
+	{
+		if(v[i] <m)
+		m = v[i];
+	}
+	return m;
+}
+int Posicion (int v[], int n)
+{
+	int m= v[0];
+	int pos = 0;
+	for (int i=1; i<n; i++)
+	{
+		if (v[i] > m)
+		m= v[i];
+		pos = i;
+	}
+	return pos;
+}
