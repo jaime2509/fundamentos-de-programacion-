@@ -1,0 +1,27 @@
+//ejercicios 6//
+
+#include "stdafx.h"
+#include <iostream> 
+#include "conio.h"
+
+
+using namespace std;
+void main()
+{
+	float p1,p2,p3,final,proyecto,promedio ; 
+	cout<<"Ingrese su primer parcial: ";
+	cin>>p1;
+	cout<<"ingrese su segundo parcial: ";
+	cin>>p2;
+	cout<<"ingrese su tercer parcial: ";
+	cin>>p3;
+	cout<<"ingrese su final: ";
+	cin>>final;
+	cout<<"ingrese la nota de su proyecto";
+	cin>>proyecto;
+	promedio=(((p1+p2+p3)*0.4)/3)+(final*0.4)+(proyecto*0.2);
+		cout<<"tu promedio final es: "<<promedio;
+	getch();
+
+	
+}
