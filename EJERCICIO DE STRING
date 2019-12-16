@@ -1,0 +1,30 @@
+#include"stdafx.h"
+#include<iostream>
+#include"conio.h"
+#include<string>//colocar la libreria
+using namespace std;
+void main(){
+	string nombre,var2; //se declara un string char nombre
+	//para invertir una frase
+	
+	getline(cin,nombre);//pedir una cadena de carcteres de teaclado
+	char aux;
+	var2=nombre;
+	longitud=nombre.length();
+	for(int i=0;i<longitud/2;i++){
+	aux=nombre[i];
+	nombre[i]=nombre[longitud-1-i];
+	nombre[longitud-1-i]=aux;
+	}
+	cout<<"la cadena invertida es: "<<endl;
+	cout<<nombre;
+	if(var2.compare(nombre)==0){
+		cout<<"es un palindromo";
+	}
+    else
+		cout<<"no es palindromo"
+
+	cout<<"suicidio";
+
+	getch();
+}
