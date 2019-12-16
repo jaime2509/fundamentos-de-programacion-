@@ -1,0 +1,57 @@
+#include<iostream>
+#include"conio.h"
+#define MAX 100
+//prototipos
+using namespace std;
+void cargar(int a[],int tam);//permite ingresa datos al vector
+void mostrar(int a[],int tam);//permite mostrar los elementos del vector
+void burbuja(int a[],int tam);//clasifica en este caso ascendentemente
+void unir(int a[],int n,int b[],int m,int c[],int tam);//une los dos vectores
+void main(){
+	int n,m,tam,A[MAX],B[MAX],C[MAX];
+do{
+cout<<"digite el numero de elementos del vector: "<<endl;
+cin>>n;
+}while((n>MAX)||(n<=0));
+cargar(A,n);//a la hora de llamada, no asignar corchetes ni tipo
+
+do{
+cout<<"digite el numero de elementos del vector b: "<<endl;
+cin>>m;
+}while((n>MAX)||(n<=0));
+cargar(B,m);//a la hora de llamada, no asignar corchetes ni tipo
+unir(a,n,b,m,c,tam);
+tam=n+m;
+burbuja(c,tam);
+mostrar(c,tam);
+
+
+
+getch();
+}
+void cargar(int a[],int tam){
+for(int i=0;i<tam;i++){
+	cin>>a[i];
+}
+void mostrar(int a[],int tam){
+	for(int i=0;i<tam;i++)
+		cout<<a[i];
+}
+void burbuja(int a[],int tam){
+	int aux;
+	for(int i=0;i<tam-1;i++){
+		for(int j=i+1;j<tam;j++){
+		if(a[i]>a[j]){
+			aux=a[i];
+			a[i]=a[j];
+			a[j]=aux;}}
+	}
+}
+void unir(int a[],int n,int b[],int m,int c[],int tam){
+	for(int i=0;i<n;i++){
+	c[i]=a[i];
+	for(int i=0;i<m;i++){
+	c[i+n]=b[i];//se traspasa en el vector c despues de a, por eso n
+	}
+}
+}
