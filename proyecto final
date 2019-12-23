@@ -1,0 +1,165 @@
+//echo en dev-c++
+#include<iostream>
+#include<conio.h>
+#define MAX 100
+using namespace std;
+void menu();
+void activos(float a);
+void pasivos(float a);
+void ingresos(float a);
+void gastos(float a);
+void patrimonio(float a);
+void EE(float a);
+void cargar(float v[],float tam);
+void mayor(float a);
+
+float ACTIVOS=0,PASIVOS=0,INGRESOS=0,GASTOS=0,PATRIMONIO=0,ESTADO_RESULTADO=0,v[MAX],MAYOR=0,tam;
+int op,a;
+
+int main()
+{
+    menu();
+    
+ return 0;
+    getch();
+}
+
+void menu(){
+do{
+    cout<<"----------MENU----------"<<endl;
+    cout<<"1. ACTIVOS"<<endl;
+    cout<<"2. PASIVOS"<<endl;
+    cout<<"3. INGRESOS"<<endl;
+    cout<<"4. GASTOS"<<endl;
+    cout<<"5. PATRIMONIO"<<endl;
+    cout<<"6. ESTADO DE RESULTADO"<<endl;
+    cout<<"7. CARGAR EL VECTOR"<<endl;
+    cout<<"8. MAYOR"<<endl;
+    cout<<"9. SALIR"<<endl;
+    cout<<"seleccione una opcion(1...9): "<<endl;
+    cin>>op;
+    switch(op) {
+    case 1:
+        activos(a);break;
+        
+    case 2:
+        pasivos(a);break;
+    case 3:
+        ingresos(a);break;
+    case 4:
+        gastos(a);break;
+    case 5:
+        patrimonio(a);break;      
+    case 6:
+	    EE(a);break;
+	case 7: 
+	cargar(v,tam) ;break;
+	case 8:
+		mayor(a);break;
+    case 9:
+        cout<<"gracias por su preferencia :)"<<endl;
+        
+		default: cout<<"fuera de rango"<<endl;
+}
+}
+while((op>=1)&&(op<9));
+}
+void activos(float a){
+    float A;
+    cout<<"digite 0 para terminar"<<endl;
+    do
+    {
+        cout<<"digite su activo: "<<endl;
+        cin>>A;
+        ACTIVOS=ACTIVOS+A;
+        cout<<"la suma de sus activos es: "<<endl;
+        cout<<ACTIVOS<<endl;
+    }
+  
+    while(A!=0);
+}
+void pasivos(float a)
+{
+    float P;
+    cout<<"digite 0 para terminar"<<endl;
+    do
+    {
+        cout<<"digite su pasivo: "<<endl;
+        cin>>P;
+        PASIVOS=PASIVOS+P;
+        cout<<"la suma de sus pasivos son: "<<endl;
+        cout<<PASIVOS<<endl;
+    }
+    while(P!=0);
+}
+void ingresos(float a)
+{
+
+    int I;
+    cout<<"presione 0 para terminar "<<endl;
+    do
+    {
+        cout<<"digite su ingreso: "<<endl;
+        cin>>I;
+        INGRESOS=INGRESOS+I;
+        cout<<"la suma de sus ingresos son: "<<endl;
+        cout<<INGRESOS<<endl;
+    }
+    while(I!=0);
+}
+void gastos(float a)
+{
+    int G;
+    cout<<"digite 0 para terminar "<<endl;
+    do
+    {
+        cout<<"digite su gasto: "<<endl;
+        cin>>G;
+        GASTOS=GASTOS+G;
+        cout<<"la suma de sus gastos son: "<<endl;
+        cout<<GASTOS<<endl;
+    }
+    while(G!=0);
+}
+void patrimonio(float a)
+{
+    int C;
+    cout<<"digite 0 para terminar "<<endl;
+    do
+    {
+    	
+        cout<<"digite su patrimonio/capital: "<<endl;
+        cin>>C;
+        PATRIMONIO=PATRIMONIO+C;
+        cout<<"la suma de su patrimonio es: "<<endl;
+        cout<<PATRIMONIO<<endl;
+    }
+    while(C!=0);
+}
+void EE(float a){
+    cout<<"la utilidad es: "<<endl;
+    ESTADO_RESULTADO=INGRESOS-GASTOS;
+   cout<<ESTADO_RESULTADO<<endl;
+   cout<<"sus activos son: "<<endl;
+   ACTIVOS=PATRIMONIO+PASIVOS;
+   cout<<ACTIVOS<<endl;
+   cout<<"sus pasivos son: "<<endl;
+   cout<<PASIVOS<<endl;
+   cout<<"su patrimonio es: "<<endl;
+   cout<<PATRIMONIO<<endl;
+}
+void cargar(float v[],float tam){
+	cout<<"digite el tamaño del vector: "<<endl;
+	cin>>tam;
+	for(int i=0;i<tam;i++){
+		cin>>v[i];
+	}
+}
+void mayor(float a){
+	for(int i=0;i<tam;i++){
+		if((v[i])>(v[i+1]))
+		MAYOR=v[i];
+		cout<<"el mayor es: "<<endl;
+		cout<<mayor;
+	}
+}
